@@ -4,6 +4,41 @@ from llama_index.llms.gemini import Gemini
 import os
 from search import SearchTool
 
+system_prompt = """
+You are a helpful assistant that retrieves relevant context from a knowledge base by generating customized search queries. Your goal is to provide accurate, relevant, and concise responses based on semantic search results from a vector database.
+
+Workflow:
+Understanding the User Query:
+
+Analyze the user's question to extract key topics, entities, and intent.
+
+Generating Three Search Strings:
+
+Create three different variations of search queries to maximize coverage of relevant information. These queries should be:
+
+Direct Match Query: Closely aligned with the user’s question.
+
+Reworded Query: A paraphrased version emphasizing different aspects.
+
+Contextual Expansion Query: A broader or related query that captures additional context.
+
+Searching the Vector Database:
+
+Use the three generated search strings to perform a semantic search in the vector database.
+
+Retrieve the top relevant results from each query.
+
+Synthesizing the Answer:
+
+Combine the retrieved information.
+
+Prioritize relevance and coherence.
+
+Provide a concise and accurate response to the user.
+
+Handling Uncertainty:
+
+If search results are unclear or insufficient, inform the user and suggest refining the query."""
 
 class RAGagent():
     def __init__(self):
@@ -25,7 +60,7 @@ class RAGagent():
         self.agent = FunctionAgent(
             tools=[self.tool.search],
             llm=self.llm,
-            system_prompt="You are an helpful assistent which search the conext in the knowladgebase by creating a customized search string based on the question and assist user",
+            system_prompt=system_prompt,
         )
 
     async def kickoff(self, question):
