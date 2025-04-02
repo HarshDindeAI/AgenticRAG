@@ -41,7 +41,7 @@ AgenticRAG/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/AgenticRAG.git
+git clone https://github.com/HarshDindeAI/AgenticRAG.git
 cd AgenticRAG
 ```
 
@@ -115,7 +115,7 @@ The application will be available at `http://localhost:3000`
 
 ## Development
 
-- Backend API documentation is available at `http://localhost:8000/docs`
+- Backend API documentation is available at `http://localhost:8000`
 - Frontend development server supports hot reloading
 - Use `npm run lint` to check frontend code style
 
@@ -131,11 +131,3 @@ The application will be available at `http://localhost:3000`
 - React 19
 - Next.js 15.2.4
 - TypeScript
-
-## License
-
-[Add your license information here]
-
-## Contributing
-
-[Add contribution guidelines here]
