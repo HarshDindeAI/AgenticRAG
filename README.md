@@ -1,51 +1,68 @@
-# AgenticRAG
+# 🤖 AgenticRAG
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black.svg)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-latest-teal.svg)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
 
 A modern web application that combines RAG (Retrieval-Augmented Generation) with agentic capabilities for intelligent document processing and querying.
 
-## Project Structure
+## 📋 Table of Contents
+
+- [Project Structure](#-project-structure)
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Running the Application](#-running-the-application)
+- [Development](#-development)
+- [Dependencies](#-dependencies)
+
+## 📁 Project Structure
 
 ```
 AgenticRAG/
 ├── app/
 │   ├── backend/           # Python backend server
-│   │   ├── agent.py      # Agent implementation
-│   │   ├── app.py        # FastAPI server
-│   │   ├── prepdocs.py   # Document preprocessing
-│   │   ├── search.py     # Search functionality
+│   │   ├── agent.py       # Agent implementation
+│   │   ├── app.py         # FastAPI server
+│   │   ├── prepdocs.py    # Document preprocessing
+│   │   ├── search.py      # Search functionality
 │   │   └── parse_tabular.py  # Tabular data parsing
-│   └── frontend/         # Next.js frontend application
-│       ├── src/          # Source code
-│       ├── public/       # Static assets
-│       └── package.json  # Frontend dependencies
-├── data/                 # Data directory
-├── requirements.txt      # Python dependencies
-└── .env                 # Environment variables
+│   └── frontend/          # Next.js frontend application
+│       ├── src/           # Source code
+│       ├── public/        # Static assets
+│       └── package.json   # Frontend dependencies
+├── data/                  # Data directory
+├── requirements.txt       # Python dependencies
+└── .env                   # Environment variables
 ```
 
-## Features
+## ✨ Features
 
-- Document preprocessing and parsing
-- Tabular data support (Excel, CSV)
-- Intelligent search capabilities
-- Agent-based query processing
-- Modern web interface
-- Token counting and management
+- 📄 **Document preprocessing** and parsing
+- 📊 **Tabular data support** (Excel, CSV)
+- 🔍 **Intelligent search** capabilities
+- 🧠 **Agent-based** query processing
+- 💻 **Modern web interface**
+- 🔢 **Token counting** and management
 
-## Prerequisites
+## 🛠️ Prerequisites
 
 - Python 3.8+
 - Node.js 18+
 - npm or yarn
 
-## Installation
+## 🚀 Installation
 
-1. Clone the repository:
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/HarshDindeAI/AgenticRAG.git
 cd AgenticRAG
 ```
 
-2. Set up the Python environment:
+### 2. Set up the Python environment
+
 ```bash
 # Create virtual environment
 python -m venv .venv
@@ -62,7 +79,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables:
+### 3. Set up environment variables
+
 ```bash
 # For Linux/Mac:
 cp app/backend/.env.example app/backend/.env
@@ -70,26 +88,30 @@ cp app/backend/.env.example app/backend/.env
 Copy-Item app/backend/.env.example app/backend/.env
 # For Windows (Command Prompt):
 copy app\backend\.env.example app\backend\.env
-
-# Edit the .env file with your configuration
-# Required variables:
-# POSTGRES_CONNECTION_STRING="postgresql+psycopg://username:password@localhost:port/database"
-# DEVICE="cpu" or "cuda" for GPU support
-# MODEL="models/gemini-2.0-flash" - Path to your model
-# TEMPERATURE=0.3 - Controls randomness in model outputs (0.0 to 1.0)
-# GEMINI_API_KEY="your-api-key" - Your Google Gemini API key
-# COLLECTION_NAME="lib" - Name of your document collection
 ```
 
-4. Install frontend dependencies:
+Edit the `.env` file with your configuration:
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `POSTGRES_CONNECTION_STRING` | PostgreSQL database connection | `postgresql+psycopg://username:password@localhost:port/database` |
+| `DEVICE` | Computing device | `cpu` or `cuda` for GPU support |
+| `MODEL` | AI model path | `models/gemini-2.0-flash` |
+| `TEMPERATURE` | Model randomness (0.0-1.0) | `0.3` |
+| `GEMINI_API_KEY` | Google Gemini API key | `your-api-key` |
+| `COLLECTION_NAME` | Document collection name | `lib` |
+
+### 4. Install frontend dependencies
+
 ```bash
 cd app/frontend
 npm install
 ```
 
-## Running the Application
+## 🖥️ Running the Application
 
-1. Start the backend server:
+### 1. Start the backend server
+
 ```bash
 # Make sure you're in the project root directory
 # For Linux/Mac:
@@ -100,7 +122,8 @@ cd app\backend
 uvicorn app:app --reload
 ```
 
-2. Start the frontend development server:
+### 2. Start the frontend development server
+
 ```bash
 # In a new terminal, make sure you're in the project root directory
 # For Linux/Mac:
@@ -111,15 +134,15 @@ cd app\frontend
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000`
+The application will be available at `http://localhost:3000` 🎉
 
-## Development
+## 🛠️ Development
 
-- Backend API documentation is available at `http://localhost:8000`
-- Frontend development server supports hot reloading
-- Use `npm run lint` to check frontend code style
+- `
+- 🔄 Frontend development server supports hot reloading
+- 📝 Use `npm run lint` to check frontend code style
 
-## Dependencies
+## 📦 Dependencies
 
 ### Backend
 - pandas >= 2.0.0
@@ -131,3 +154,7 @@ The application will be available at `http://localhost:3000`
 - React 19
 - Next.js 15.2.4
 - TypeScript
+
+---
+
+Made with ❤️ and 🧠 by HarshDindeAI
