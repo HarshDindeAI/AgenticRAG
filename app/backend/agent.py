@@ -3,6 +3,7 @@ from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.gemini import Gemini
 import os
 from search import SearchTool
+from llama_index.core.llms import ChatMessage
 
 system_prompt = """
 You are a helpful assistant that retrieves relevant context from a knowledge base by generating customized search queries. Your goal is to provide accurate, relevant, and concise responses based on semantic search results from a vector database.
@@ -63,6 +64,9 @@ class RAGagent():
             system_prompt=system_prompt,
         )
 
-    async def kickoff(self, question):
-        response = await self.agent.run(question)
+    async def kickoff(self, question, history):
+        history_list = []
+        for message in history:
+            history_list.append(ChatMessage(content=message["content"], role=message["role"]))
+        response = await self.agent.run(user_msg=question, chat_history=history_list)
         return response

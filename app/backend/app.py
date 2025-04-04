@@ -23,8 +23,10 @@ async def init():
 @app.route("/ask", methods=["POST"])
 async def ask():
     question = request.json["question"]
+    history = request.json["history"]
+    print(history)
     agent: RAGagent = RAGagent()
-    answer = await agent.kickoff(question)
+    answer = await agent.kickoff(question, history)
     print(answer)
     return {"answer": str(answer)}, 200
 
