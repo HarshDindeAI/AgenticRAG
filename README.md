@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black.svg)](https://nextjs.org/)
 [![FlaskAPI](https://img.shields.io/badge/FlaskAPI-latest-teal.svg)](http://flask.palletsprojects.com/en/stable/)
-[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
+[![NextJS](https://img.shields.io/badge/Next-15-blue.svg)](https://nextjs.org/)
 
 A modern web application that combines RAG (Retrieval-Augmented Generation) with agentic capabilities for intelligent document processing and querying.
 
