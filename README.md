@@ -7,9 +7,11 @@
 
 A modern web application that combines RAG (Retrieval-Augmented Generation) with agentic capabilities for intelligent document processing and querying.
 
+
 ## 📋 Table of Contents
 
 - [Project Structure](#-project-structure)
+- [Diagram](#-Diagram)
 - [Features](#-features)
 - [Prerequisites](#-prerequisites)
 - [Installation](#-installation)
@@ -37,10 +39,13 @@ AgenticRAG/
 └── .env                   # Environment variables
 ```
 
+## Diagram
+<img src="./image.png"></img>
+
 ## ✨ Features
 
 - 📄 **Document preprocessing** and parsing
-- 📊 **Tabular data support** (Excel, CSV)
+- 📊 **Tabular data support** (Excel, CSV) (Upcoming)
 - 🔍 **Intelligent search** capabilities
 - 🧠 **Agent-based** query processing
 - 💻 **Modern web interface**
